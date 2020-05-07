@@ -156,7 +156,7 @@ export default class Validation {
                             ) {
                                 messanger[
                                     rule
-                                ] = `${fieldName} Must be Bgger than ${min} and Smaller than ${max}`;
+                                ] = `${fieldName} Must be Bigger than ${min} and Smaller than ${max}`;
                             }
                         }
                         // alpha
@@ -186,7 +186,6 @@ export default class Validation {
                     }
 
                     if (Object.keys(messanger).length === 0) {
-                        console.log("Done!");
                         label.textContent = "";
                         label.classList.remove("show-label", "alert", "alert-danger");
                     } else {
@@ -194,7 +193,7 @@ export default class Validation {
                             if (Object.keys(messanger).includes(msg)) {
                                 const message = messanger[msg];
                                 if (message !== "") {
-                                    label.textContent = message;
+                                    label.textContent = message.toLocaleLowerCase();
                                     label.classList.add("show-label", "alert", "alert-danger");
                                     break;
                                 }
@@ -223,7 +222,7 @@ export default class Validation {
                     self.getStatus(inputField.parentElement.nextElementSibling)
                 ) {
                     e.preventDefault();
-                    msg.textContent = "all Fields is Required!";
+                    msg.textContent = "All Fields is Required!";
                     msg.classList.add("error-msg", "alert", "alert-danger");
 
                     setTimeout(() => {

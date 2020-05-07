@@ -1,0 +1,109 @@
+$font-family: 'Roboto';
+$bg-color-input: #e3eaef;
+$bg-color-icon: #95afc0;
+$primary-color: #3c4a56;
+$success-color: #2196f3;
+$danger-color: #e91e63;
+
+.form-container {
+    width: 50%;
+    margin: 60px auto;
+}
+
+.sign-in-btn .save {
+    padding: 10px 15px;
+    border: none;
+    background: #2196F3;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: .25rem;
+    color: #fff;
+}
+
+.form-group {
+    &:first-child {
+        margin-top: 0px;
+    }
+    margin-top: 20px;
+    font-family: $font-family;
+    label {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        display: block;
+        color: $primary-color;
+    }
+    .input-container {
+        width: 100%;
+        .input-group {
+            width: 100%;
+
+            .input-field {
+                width: calc(100% - 32px);
+                background: $bg-color-input;
+                border: none;
+                padding: 11px 20px;
+                color: $primary-color;
+                border-bottom-right-radius: .25rem;
+                border-top-right-radius: .25rem;
+            }
+        }
+        .label-msg {
+            padding: 0;
+            border-radius: .25rem;
+            font-size: 16px;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            margin: 0;
+            max-height: 0;
+            transition: .6s;
+        }
+    }
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-danger {
+    color: #721c24 !important;
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+}
+
+.alert-success {
+    color: #155724 !important;
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+}
+
+.show-label {
+    padding: 5px 10px !important;
+    border-radius: .25rem !important;
+    font-size: 16px !important;
+    width: calc(100% - 32px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-top: 5px !important;
+    max-height: 100% !important;
+    transition: .6s;
+}
+
+.error-msg {
+    transition: .6s;
+    opacity: 1 !important;
+    ;
+    visibility: visible !important;
+}
+
+.msg {
+    transition: .6s;
+    opacity: 0;
+    visibility: 0;
+}
