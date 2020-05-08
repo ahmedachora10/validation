@@ -1,4 +1,6 @@
 import Validation from "./js/validation.js";
+
+// ES6
 class Loggin extends Validation {
     constructor() {
         super();
@@ -9,17 +11,18 @@ class Loggin extends Validation {
         const rules = {
             ele: {
                 username: document.querySelector("input[name=username]"),
-                "confirm password": document.querySelector("input[name=password]"),
+                password: document.querySelector("input[name=password]"),
             },
             rules: {
                 username: "req|alpha|min(3)",
-                "confirm password": "req|alphaNum|between(8,25)",
+                password: "req|alphaNum|between(8,25)",
             },
             button: document.querySelector(".save"),
         };
 
-        const userAuth = () => {
-            /* Do Stuff */
+        // Callback Function
+        const userAuth = (data) => {
+            // Do Stuff
         };
 
         this.isValid(rules, userAuth);
@@ -37,12 +40,13 @@ class Loggin extends Validation {
             rules: {
                 username: "req|alpha|min(3)",
                 passwrod: "req|alphaNum|between(8,25)",
-                "confirm password": "req|alphaNum|between(8.25)|eq(password)",
+                "confirm password": "req|alphaNum|between(8,25)|eq(password)",
                 email: "req|email",
             },
             button: document.querySelector("#save"),
         };
 
+        // Callback Function
         const userAuth = () => {
             /* Do Stuff */
         };
@@ -51,22 +55,27 @@ class Loggin extends Validation {
     }
 }
 
+// new Instance
 const f = new Loggin();
 f.signIn();
 
-/*
-// Create an Object
-const validatinRules = {
+// Rules Object
+const validationRules = {
     ele: {
-        username: document.querySelector('.name')
+        username: document.querySelector("input[name=username]"),
+        password: document.querySelector("input[name=password]"),
     },
     rules: {
-        username: 'req|alpha|min(3)'
+        username: "req|alpha|min(3)",
+        password: "req|alphaNum|between(8,25)",
     },
-    button: document.querySelector('#registry')
+    button: document.querySelector(".save"),
 };
 
+// Callback Function
+const userAuth = () => {
+    /* Do Stuff*/
+};
 
 const valid = new Validation();
-valid.isValid(validatinRules, () => { /* Do Stuff });
-/*/
+valid.isValid(validationRules, userAuth);

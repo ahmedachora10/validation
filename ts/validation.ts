@@ -75,7 +75,7 @@ export default class Validation {
         return this;
     }
 
-    public isValid(obj, success): any {
+    public isValid(obj, success = null): any {
         // Make Sure to be obj parameter instance of an object
         if (!(obj instanceof Object) && !(typeof obj === "object"))
             throw new Error("Obj Parameter Must be an Object!");
@@ -240,7 +240,7 @@ export default class Validation {
 
             // If All Fields Valid Do Somthing and send
             if (valid.length === inputFields.length) {
-                doSomthing(inputFields);
+                if (doSomthing !== null) return doSomthing(inputFields);
             }
         };
     }
