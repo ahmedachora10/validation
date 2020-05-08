@@ -1,9 +1,17 @@
 $font-family: 'Roboto';
 $bg-color-input: #e3eaef;
-$bg-color-icon: #95afc0;
 $primary-color: #3c4a56;
-$success-color: #2196f3;
-$danger-color: #e91e63;
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+}
 
 .form-container {
     width: 50%;
@@ -38,7 +46,6 @@ $danger-color: #e91e63;
         width: 100%;
         .input-group {
             width: 100%;
-
             .input-field {
                 width: calc(100% - 32px);
                 background: $bg-color-input;
